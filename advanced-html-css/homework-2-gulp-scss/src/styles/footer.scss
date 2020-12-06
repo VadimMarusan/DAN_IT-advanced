@@ -1,0 +1,87 @@
+@import "./vars";
+
+footer {
+  padding: 57px 0;
+  text-align: center;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+
+  @media (max-width: 1200px) {
+    width: 1200px;
+  }
+
+  @media (max-width: 768px) {
+    width: 768px;
+  }
+
+  @media (max-width: 320px) {
+    max-width: 320px;
+  }
+
+    .footer-title {
+      font-size: $title-font;
+      line-height: $title-line-height;
+      font-weight: $title-weight;
+      text-transform: $uppercase;
+      color: #FEFEFE;
+    }
+
+    .footer-desc {
+      margin-top: 22px;
+      line-height: 28px;
+      color: #B9B9B9;
+    }
+
+    .footer-container-icons {
+      margin-top: 37px;
+      display: flex;
+      justify-content: center;
+
+        .icon-round {
+          width: 34px;
+          height: 34px;
+          margin: 0 5px;
+          border-radius: 50%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+            & .fa-wifi {
+              font-size: 12px;
+              color: orange;
+            }
+
+            & .fa-facebook-f {
+              font-size: 14px;
+              color: #3b5998;
+            }
+
+            & .fa-tumblr {
+              font-size: 12px;
+              color: #00acee;
+            }
+
+            & .fa-bullseye {
+              font-size: 12px;
+              color: hotpink;
+            }
+
+            & .fa-pinterest-p {
+              font-size: 14px;
+              color: darkred;
+            }
+      }
+
+    }
+
+    & .footer-contacts {
+      margin-top: 34px;
+      color: #B9B9B9;
+    }
+
+    & .footer-contacts span {
+      padding: 0 10px;
+    }
+}
+

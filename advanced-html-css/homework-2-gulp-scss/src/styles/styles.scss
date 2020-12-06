@@ -1,0 +1,30 @@
+@import "./reset";
+@import "./header";
+@import "./background";
+@import "./content";
+@import "./instagram";
+@import "./footer";
+
+
+body {
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+}
+
+.container {
+  width: 1200px;
+  padding: 0 15px;
+  margin: 0 auto;
+
+  @media (max-width: 768px) {
+    width: 768px;
+  }
+
+  @media (max-width: 320px) {
+    max-width: 320px;
+  }
+
+
+
+}
+

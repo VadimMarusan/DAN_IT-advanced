@@ -1,0 +1,39 @@
+@import "./vars";
+
+.instagram {
+  background-color: #ddd8d8;
+  padding: 45px 0 35px 0;
+}
+
+#instagram-img-1 > img, #instagram-img-2 > img, #instagram-img-3 > img, #instagram-img-4 >img {
+    max-width: 100%;
+    height: auto;
+
+
+}
+
+.instagram-title-container {
+  display: flex;
+  justify-content: space-between;
+
+  & .instagram__title {
+    font-size: $title-font;
+    line-height: $title-line-height;
+    font-weight: $title-weight;
+    color: $primary-color;
+    text-transform: $uppercase;
+  }
+
+  & .instagram__link {
+    font-weight: $title-weight;
+    font-size: 13px;
+    line-height: 22px;
+    color: $primary-color;
+    text-transform: $uppercase;
+  }
+}
+
+.instagram-img-container {
+  display: flex;
+  justify-content: center;
+}
