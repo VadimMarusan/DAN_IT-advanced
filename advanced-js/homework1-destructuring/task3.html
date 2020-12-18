@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<span class="name"></span>
+<span class="age"></span>
+<span class="isAdmin"></span>
+
+
+<script>
+    const user1 = {
+        name: "John",
+        years: 30
+    };
+
+    let {name: name, years: age, isAdmin: isAdmin = false} = user1;
+
+    let nameSpan = document.querySelector(".name")
+    let ageSpan = document.querySelector(".age")
+    let isAdminSpan = document.querySelector(".isAdmin")
+
+    nameSpan.innerText = name;
+    ageSpan.innerText = age;
+    isAdminSpan.innerText = isAdmin;
+
+</script>
+</body>
+</html>
