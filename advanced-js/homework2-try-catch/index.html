@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="root">
+
+</div>
+
+
+<script>
+    const books = [
+        {
+            author: "Скотт Бэккер",
+            name: "Тьма, что приходит прежде",
+            price: 70
+        },
+        {
+            author: "Скотт Бэккер",
+            name: "Воин-пророк",
+        },
+        {
+            name: "Тысячекратная мысль",
+            price: 70
+        },
+        {
+            author: "Скотт Бэккер",
+            name: "Нечестивый Консульт",
+            price: 70
+        },
+        {
+            author: "Дарья Донцова",
+            name: "Детектив на диете",
+            price: 40
+        },
+        {
+            author: "Дарья Донцова",
+            name: "Дед Снегур и Морозочка",
+        }
+    ];
+
+    let root = document.querySelector('#root');
+    let ul = document.createElement("ul");
+    ul.className = ("list");
+    root.appendChild(ul);
+
+
+    function showBooks(arr, list) {
+        arr.map(function (i) {
+            try {
+                if (!i.author ){
+                    throw new Error("author is undefined")
+                } else if (!i.name) {
+                    throw new Error("name is undefined")
+                }  else if (!i.price) {
+                throw new Error("price is undefined")
+            }
+            list.innerHTML += `<li>${i.author}, ${i.name}, ${i.price}</li>`
+
+            } catch (e) {
+                console.log(e)
+            }
+        })
+    }
+    showBooks(books, ul);
+
+</script>
+</body>
+</html>
