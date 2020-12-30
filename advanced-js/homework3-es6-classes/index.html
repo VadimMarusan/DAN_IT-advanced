@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    class Employee {
+        constructor({name, age, salary}) {
+            this.name = name,
+            this.age = age,
+            this.salary = salary
+        }
+
+
+        set name(value) {
+            this._name = value
+        }
+
+        get name() {
+            return this._name;
+        }
+
+
+
+        set age(value) {
+            this._age = value< 0 ? 0 : value;
+        }
+
+        get age() {
+            return this._age;
+        }
+
+
+
+        set salary(value) {
+            this._salary = value <=0 ? 1+"$": value
+        }
+
+        get salary() {
+            return this._salary;
+        }
+    }
+
+    class Programmer extends Employee{
+        constructor({name, age, salary, lang}) {
+            super({name, age, salary});
+            this.lang = lang;
+        }
+        set salary(value) {
+            this._salary = value*3
+        }
+
+        get salary() {
+            return this._salary
+        }
+    }
+
+    const programmer1 = new Programmer({
+        name: "John",
+        age: 19,
+        salary: 5000,
+        lang: {
+            eng: true,
+            esp: false
+        }
+    })
+
+    const programmer2 = new Programmer({
+        name: "Viktor",
+        age: 29,
+        salary: 3000,
+        lang: {
+            eng: false,
+            esp: true
+        }
+    })
+
+    console.log(programmer1, programmer2)
+
+
+
+</script>
+</body>
+</html>
