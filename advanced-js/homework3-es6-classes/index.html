@@ -50,11 +50,12 @@
             this.lang = lang;
         }
         set salary(value) {
-            this._salary = value*3
+            this._salary = value
         }
 
         get salary() {
-            return this._salary
+            return this._salary*3
+
         }
     }
 
@@ -78,7 +79,7 @@
         }
     })
 
-    console.log(programmer1, programmer2)
+    console.log(programmer1.salary, programmer2.salary, programmer1, programmer2)
 
 
 
